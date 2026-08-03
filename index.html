@@ -16,7 +16,7 @@
   <meta property="og:url" content="https://chersiaca.com/" />
   <meta property="og:title" content="CHERSIA, C.A. | Suministro Petrolero e Industrial" />
   <meta property="og:description" content="Más de 55 años suministrando herramientas de precisión, equipos antichispas y maquinaria industrial para el sector petrolero en Venezuela." />
-  <meta property="og:image" content="https://chersiaca.com/img/hero-tools.png" />
+  <meta property="og:image" content="https://chersiaca.com/img/tools-clean.jpg" />
   <meta property="og:site_name" content="CHERSIA, C.A." />
   <meta property="og:locale" content="es_VE" />
 
@@ -25,7 +25,7 @@
   <meta name="twitter:url" content="https://chersiaca.com/" />
   <meta name="twitter:title" content="CHERSIA, C.A. | Suministro Petrolero e Industrial" />
   <meta name="twitter:description" content="Más de 55 años suministrando herramientas de precisión, equipos antichispas y maquinaria industrial para el sector petrolero en Venezuela." />
-  <meta name="twitter:image" content="https://chersiaca.com/img/hero-tools.png" />
+  <meta name="twitter:image" content="https://chersiaca.com/img/tools-clean.jpg" />
 
   <!-- Favicons & App Manifest -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -34,7 +34,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Google Fonts & Font Awesome Icons -->
+  <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -63,7 +63,7 @@
         "@type": "LocalBusiness",
         "@id": "https://chersiaca.com/#localbusiness",
         "name": "CHERSIA, C.A. - Suministro Industrial y Petrolero",
-        "image": "https://chersiaca.com/img/hero-tools.png",
+        "image": "https://chersiaca.com/img/tools-clean.jpg",
         "url": "https://chersiaca.com",
         "telephone": "+58-414-8150009",
         "email": "chersiaca@gmail.com",
@@ -168,7 +168,7 @@
       color: var(--orange);
     }
 
-    /* Section Tag with Dash (e.g. — SOBRE NOSOTROS) */
+    /* Section Tag with Dash */
     .section-tag {
       display: inline-flex;
       align-items: center;
@@ -212,7 +212,7 @@
       color: #94a3b8;
     }
 
-    /* Reference Style Button: Pill with Circle Arrow Attachment */
+    /* Reference Style Button */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -280,7 +280,7 @@
     }
 
     /* ================================================================
-       1. TOP BAR (NAVY DARK)
+       1. TOP BAR
        ================================================================ */
     .topbar {
       background-color: var(--navy-dark);
@@ -325,7 +325,7 @@
     }
 
     /* ================================================================
-       2. MAIN NAVBAR (WHITE STICKY)
+       2. MAIN NAVBAR
        ================================================================ */
     header {
       background: var(--bg-white);
@@ -803,32 +803,79 @@
     }
 
     /* ================================================================
-       10. BRANDS SECTION
+       10. BRANDS INFINITE MARQUEE CAROUSEL
        ================================================================ */
     .brands-section {
       padding: 50px 0;
-    }
-    .brands-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 14px;
-    }
-    .brand-box {
       background: var(--bg-white);
-      border-radius: var(--radius-md);
-      padding: 20px 12px;
-      text-align: center;
-      border: 1px solid var(--border-light);
-      transition: var(--transition);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      overflow: hidden;
     }
-    .brand-box:hover {
+    
+    .brands-carousel-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 10px 0;
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .brands-track {
+      display: flex;
+      gap: 28px;
+      width: max-content;
+      animation: infiniteMarquee 22s linear infinite;
+    }
+    .brands-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes infiniteMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .brand-logo-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 170px;
+      height: 72px;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+      user-select: none;
+    }
+    .brand-logo-card:hover {
       border-color: var(--orange);
       transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
     }
-    .brand-title {
-      font-size: 1.2rem;
-      font-weight: 900;
-      color: var(--navy-dark);
+
+    /* Styled Brand Typography & Badges */
+    .brand-ridgid {
+      font-weight: 900; font-size: 1.35rem; color: #d92323; letter-spacing: -0.02em; font-family: sans-serif;
+    }
+    .brand-proto {
+      font-weight: 900; font-size: 1.15rem; background: #c59b27; color: #0f172a; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.1em;
+    }
+    .brand-snapon {
+      font-weight: 900; font-size: 1.35rem; color: #e31b23; font-style: italic; font-family: sans-serif;
+    }
+    .brand-dewalt {
+      font-weight: 900; font-size: 1.3rem; background: #feb81c; color: #000000; padding: 4px 10px; border-radius: 3px; letter-spacing: -0.02em;
+    }
+    .brand-bosch {
+      font-weight: 900; font-size: 1.3rem; color: #ea1d25; letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;
+    }
+    .brand-stanley {
+      font-weight: 900; font-size: 1.25rem; background: #ffcc00; color: #000000; padding: 4px 10px; border-radius: 2px; letter-spacing: 0.04em;
     }
 
     /* ================================================================
@@ -999,9 +1046,7 @@
     }
     .drawer-links a { color: #ffffff; font-size: 1.1rem; font-weight: 700; }
 
-    /* ================================================================
-       CRITICAL MOBILE FIXES (PREVENT OVERFLOW & SQUISH)
-       ================================================================ */
+    /* MOBILE RESPONSIVE MEDIA QUERIES */
     @media (max-width: 1024px) {
       .hero-grid, .about-grid, .projects-grid, .trust-grid, .form-box-grid, .faq-grid {
         grid-template-columns: 1fr;
@@ -1009,9 +1054,6 @@
       }
       .cards-3-grid, .steps-grid {
         grid-template-columns: 1fr;
-      }
-      .brands-grid {
-        grid-template-columns: repeat(3, 1fr);
       }
       .footer-top {
         grid-template-columns: 1fr 1fr;
@@ -1064,9 +1106,6 @@
       .form-group-row {
         grid-template-columns: 1fr;
         gap: 0;
-      }
-      .brands-grid {
-        grid-template-columns: repeat(2, 1fr);
       }
       .footer-top {
         grid-template-columns: 1fr;
@@ -1125,7 +1164,7 @@
 
 
   <!-- ================================================================
-       2. MAIN NAVBAR (ONLY: INICIO, NOSOTROS, CONTACTO)
+       2. MAIN NAVBAR (REQUISICIÓN CTAS)
        ================================================================ -->
   <header>
     <div class="container nav-container">
@@ -1144,14 +1183,14 @@
 
       <div style="display: flex; align-items: center; gap: 12px;">
         <a href="#contacto" class="btn btn-orange" style="width: auto;">
-          Solicitar Cotización <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          Solicitar Requisición <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
         </a>
         <button class="mobile-btn" onclick="toggleDrawer()"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer (Only: Inicio, Nosotros, Contacto) -->
+  <!-- Mobile Drawer -->
   <div class="mobile-drawer" id="drawer">
     <button class="drawer-close" onclick="toggleDrawer()"><i class="fa-solid fa-xmark"></i></button>
     <ul class="drawer-links">
@@ -1161,14 +1200,14 @@
     </ul>
     <div style="margin-top: 32px;">
       <a href="#contacto" onclick="toggleDrawer()" class="btn btn-orange" style="width: 100%;">
-        Solicitar Cotización <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        Solicitar Requisición <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
       </a>
     </div>
   </div>
 
 
   <!-- ================================================================
-       3. HERO SECTION
+       3. HERO SECTION (UPDATED WITH PRISTINE CLEAN TOOL IMAGE)
        ================================================================ -->
   <section class="hero-section" id="inicio">
     <div class="container">
@@ -1196,8 +1235,9 @@
 
         <div>
           <div class="hero-split-cards">
+            <!-- Pristine Clean Tools Image from User Upload -->
             <div class="hero-img-card">
-              <img src="img/hero-tools.png" alt="Herramientas industriales de precisión" />
+              <img src="img/tools-clean.jpg" alt="Equipamiento y herramientas industriales de alta calidad Chersia C.A." />
             </div>
 
             <div class="hero-orange-stat-card">
@@ -1232,7 +1272,7 @@
             Entendemos las exigencias de los entornos de trabajo más duros. En Chersia C.A. entregamos soluciones confiables respaldadas por atención personalizada y herramientas que cumplen con los más rigurosos estándares internacionales.
           </p>
           <a href="#contacto" class="btn btn-orange">
-            Solicitar Asesoría Técnica <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            Contactar Asesor <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
           </a>
         </div>
 
@@ -1243,7 +1283,7 @@
 
 
   <!-- ================================================================
-       5. SERVICES / EQUIPMENT CATEGORIES (STAYS ON WEB BODY)
+       5. SERVICES / EQUIPMENT CATEGORIES (UPDATED WITH CLEAN TOOLS IMAGE)
        ================================================================ -->
   <section class="services-section" id="equipamiento">
     <div class="container">
@@ -1271,7 +1311,7 @@
               <li><i class="fa-solid fa-circle"></i> Cero Chispas en Gas Inflamable</li>
             </ul>
             <a href="#contacto" onclick="selectCategory('Herramientas Antichispas')" class="read-more-link">
-              Cotizar Antichispa <i class="fa-solid fa-arrow-right"></i>
+              Consultar Antichispa <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -1291,15 +1331,15 @@
               <li><i class="fa-solid fa-circle"></i> Tronzadoras, Lijadoras & Pulidoras</li>
             </ul>
             <a href="#contacto" onclick="selectCategory('Potencia Eléctrica')" class="read-more-link">
-              Cotizar Eléctricos <i class="fa-solid fa-arrow-right"></i>
+              Consultar Eléctricos <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
 
-        <!-- Card 3: Intervención Manual -->
+        <!-- Card 3: Intervención Manual (Pristine Clean Tools Image) -->
         <div class="service-card">
           <div class="service-card-img">
-            <img src="img/warehouse.png" alt="Intervención Manual y Consumibles" />
+            <img src="img/tools-clean.jpg" alt="Sets de Herramientas de Precisión Chersia C.A." />
             <div class="service-icon-badge"><i class="fa-solid fa-wrench"></i></div>
           </div>
           <div class="service-card-body">
@@ -1311,7 +1351,7 @@
               <li><i class="fa-solid fa-circle"></i> Mechas, Discos de Corte & Rectificadores</li>
             </ul>
             <a href="#contacto" onclick="selectCategory('Intervención Manual')" class="read-more-link">
-              Cotizar Manuales <i class="fa-solid fa-arrow-right"></i>
+              Consultar Manuales <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -1360,7 +1400,7 @@
 
 
   <!-- ================================================================
-       7. FEATURED PROJECTS / PRESENCE
+       7. FEATURED PROJECTS
        ================================================================ -->
   <section class="projects-section">
     <div class="container">
@@ -1457,8 +1497,8 @@
       
       <div style="text-align: center; margin-bottom: 40px;">
         <span class="section-tag">REQUISICIONES</span>
-        <h2 class="section-title">¿Necesita Equipamiento? <span class="text-orange">Hablemos.</span></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Envíenos su lista de ítems o especificaciones técnicas y le enviaremos la cotización a la brevedad.</p>
+        <h2 class="section-title">Formulario de Requisición <span class="text-orange">Directa</span></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Envíenos su lista de ítems o especificaciones técnicas y le atenderemos a la brevedad.</p>
       </div>
 
       <div class="form-box-grid">
@@ -1524,7 +1564,7 @@
             </div>
           </div>
 
-          <a href="https://wa.me/584148150009?text=Hola%20Chersia%20C.A.,%20deseo%20solicitar%20información%20y%20cotización." target="_blank" class="btn btn-orange" style="background: #25d366; box-shadow: none; margin-top: 16px;">
+          <a href="https://wa.me/584148150009?text=Hola%20Chersia%20C.A.,%20deseo%20solicitar%20información." target="_blank" class="btn btn-orange" style="background: #25d366; box-shadow: none; margin-top: 16px;">
             <i class="fa-brands fa-whatsapp"></i> Chat de WhatsApp Directo
           </a>
         </div>
@@ -1536,22 +1576,36 @@
 
 
   <!-- ================================================================
-       10. BRANDS SECTION (STAYS ON WEB BODY)
+       10. BRANDS INFINITE MARQUEE CAROUSEL WITH AUTHENTIC STYLED LOGOS
        ================================================================ -->
   <section class="brands-section" id="marcas">
     <div class="container">
       
-      <div style="text-align: center; margin-bottom: 24px;">
+      <div style="text-align: center; margin-bottom: 20px;">
         <span class="section-tag">MARCAS HOMOLOGADAS</span>
       </div>
 
-      <div class="brands-grid">
-        <div class="brand-box"><div class="brand-title">RIDGID</div></div>
-        <div class="brand-box"><div class="brand-title">PROTO</div></div>
-        <div class="brand-box"><div class="brand-title">Snap-on</div></div>
-        <div class="brand-box"><div class="brand-title">DEWALT</div></div>
-        <div class="brand-box"><div class="brand-title">BOSCH</div></div>
-        <div class="brand-box"><div class="brand-title">STANLEY</div></div>
+      <!-- Continuous Infinite Marquee Track -->
+      <div class="brands-carousel-wrapper">
+        <div class="brands-track">
+          
+          <!-- Set 1 of Brand Logos -->
+          <div class="brand-logo-card"><span class="brand-ridgid">RIDGID</span></div>
+          <div class="brand-logo-card"><span class="brand-proto">PROTO</span></div>
+          <div class="brand-logo-card"><span class="brand-snapon">Snap-on</span></div>
+          <div class="brand-logo-card"><span class="brand-dewalt">DEWALT</span></div>
+          <div class="brand-logo-card"><span class="brand-bosch"><i class="fa-solid fa-gear"></i> BOSCH</span></div>
+          <div class="brand-logo-card"><span class="brand-stanley">STANLEY</span></div>
+
+          <!-- Duplicated Set 2 for Seamless Infinite Loop -->
+          <div class="brand-logo-card"><span class="brand-ridgid">RIDGID</span></div>
+          <div class="brand-logo-card"><span class="brand-proto">PROTO</span></div>
+          <div class="brand-logo-card"><span class="brand-snapon">Snap-on</span></div>
+          <div class="brand-logo-card"><span class="brand-dewalt">DEWALT</span></div>
+          <div class="brand-logo-card"><span class="brand-bosch"><i class="fa-solid fa-gear"></i> BOSCH</span></div>
+          <div class="brand-logo-card"><span class="brand-stanley">STANLEY</span></div>
+
+        </div>
       </div>
 
     </div>
@@ -1559,7 +1613,7 @@
 
 
   <!-- ================================================================
-       11. FAQ ACCORDION SECTION
+       11. FAQ ACCORDION SECTION (INVENTORY QUESTION REMOVED)
        ================================================================ -->
   <section class="faq-section">
     <div class="container">
@@ -1568,21 +1622,11 @@
         
         <div>
           <span class="section-tag">PREGUNTAS FRECUENTES</span>
-          <h2 class="section-title">¿Dudas sobre <span class="text-orange">Suministros</span>?</h2>
+          <h2 class="section-title">Dudas Frecuentes sobre <span class="text-orange">Suministros</span></h2>
 
           <div class="accordion">
             
             <div class="accordion-item active">
-              <div class="accordion-header" onclick="toggleFaq(this)">
-                <span>¿Cuentan con inventario para entrega inmediata?</span>
-                <i class="fa-solid fa-chevron-down"></i>
-              </div>
-              <div class="accordion-body">
-                Sí. Contamos con stock disponible en Puerto La Cruz para despacho directo a zonas industriales y refinerías de la región oriental y nacional.
-              </div>
-            </div>
-
-            <div class="accordion-item">
               <div class="accordion-header" onclick="toggleFaq(this)">
                 <span>¿Qué certificaciones tienen las herramientas antichispas?</span>
                 <i class="fa-solid fa-chevron-down"></i>
@@ -1604,7 +1648,7 @@
 
             <div class="accordion-item">
               <div class="accordion-header" onclick="toggleFaq(this)">
-                <span>¿Cómo solicitamos una cotización formal corporativa?</span>
+                <span>¿Cómo solicitamos una requisición formal corporativa?</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
               <div class="accordion-body">
@@ -1688,7 +1732,7 @@
 
 
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/584148150009?text=Hola%20Chersia%20C.A.,%20deseo%20solicitar%20una%20cotización." target="_blank" class="whatsapp-float">
+  <a href="https://wa.me/584148150009?text=Hola%20Chersia%20C.A.,%20deseo%20solicitar%20información." target="_blank" class="whatsapp-float">
     <i class="fa-brands fa-whatsapp"></i>
     <span>Atención WhatsApp</span>
   </a>
@@ -1712,7 +1756,7 @@
     function selectCategory(catName) {
       const field = document.getElementById('fDetails');
       if (field) {
-        field.value = `Interesado en cotizar la línea: ${catName}.\nPor favor indicar disponibilidad y presupuesto.`;
+        field.value = `Interesado en la línea: ${catName}.\nPor favor indicar disponibilidad y presupuesto.`;
       }
       showToast(`Categoría "${catName}" seleccionada.`);
     }
