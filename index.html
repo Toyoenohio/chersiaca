@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>CHERSIA, C.A. | Aliado Integral de la Industria Petrolera y Mecánica</title>
+  <meta name="description" content="Chersia C.A. - Más de 55 años suministrando herramientas industriales, equipos antichispas y soluciones mecánicas de alta precisión para el sector petrolero." />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* ================================================================
+       THEME COLOR SYSTEM & TOKENS
+       ================================================================ */
+    :root {
+      --navy-dark: #0b1938;
+      --navy-card: #102248;
+      --navy-deep: #060e22;
+
+      --orange: #ff7000;
+      --orange-hover: #e06200;
+      --orange-light: #fff3eb;
+
+      --bg-light: #f4f6fa;
+      --bg-white: #ffffff;
+
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --text-white: #ffffff;
+
+      --border-light: #e2e8f0;
+      --border-dark: rgba(255, 255, 255, 0.12);
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 30px rgba(11, 25, 56, 0.08);
+      --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Orange Text Accent */
+    .text-orange {
+      color: var(--orange);
+    }
+
+    /* Section Tag with Dash (e.g. — SOBRE NOSOTROS) */
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .section-tag::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 2px;
+      background-color: var(--orange);
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+      word-wrap: break-word;
+    }
+    .section-title.light {
+      color: var(--text-white);
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+    .section-subtitle.light {
+      color: #94a3b8;
+    }
+
+    /* Reference Style Button: Pill with Circle Arrow Attachment */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      white-space: nowrap;
+      max-width: 100%;
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: #ffffff;
+      box-shadow: 0 6px 20px rgba(255, 112, 0, 0.3);
+    }
+    .btn-orange:hover {
+      background: var(--orange-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(255, 112, 0, 0.45);
+    }
+
+    .btn-navy {
+      background: var(--navy-dark);
+      color: #ffffff;
+    }
+    .btn-navy:hover {
+      background: var(--navy-card);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--navy-dark);
+      color: var(--navy-dark);
+    }
+    .btn-outline:hover {
+      background: var(--navy-dark);
+      color: #ffffff;
+    }
+
+    .btn-arrow {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    /* LOGO STYLING */
+    .logo-img {
+      height: 38px;
+      width: auto;
+      max-width: 220px;
+      object-fit: contain;
+    }
+
+    /* ================================================================
+       1. TOP BAR (NAVY DARK)
+       ================================================================ */
+    .topbar {
+      background-color: var(--navy-dark);
+      color: #94a3b8;
+      font-size: 0.8rem;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .topbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .topbar-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .topbar-item i {
+      color: var(--orange);
+    }
+    .topbar-social {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .topbar-social a {
+      color: #94a3b8;
+      transition: var(--transition);
+    }
+    .topbar-social a:hover {
+      color: var(--orange);
+    }
+
+    /* ================================================================
+       2. MAIN NAVBAR (WHITE STICKY)
+       ================================================================ */
+    header {
+      background: var(--bg-white);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+      padding: 14px 0;
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    nav a {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    nav a:hover {
+      color: var(--orange);
+    }
+    .mobile-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--navy-dark);
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* ================================================================
+       3. HERO SECTION
+       ================================================================ */
+    .hero-section {
+      padding: 50px 0;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: var(--navy-dark);
+      word-wrap: break-word;
+    }
+    .hero-subtitle {
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      max-width: 520px;
+    }
+
+    .hero-split-cards {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .hero-img-card {
+      height: 240px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-img-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-orange-stat-card {
+      background: var(--orange);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-orange-stat-card h3 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .hero-orange-stat-card p {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.95;
+    }
+
+    /* ================================================================
+       4. ABOUT SECTION
+       ================================================================ */
+    .about-section {
+      padding: 70px 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .about-img-box {
+      height: 360px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .about-navy-card {
+      background: var(--navy-dark);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      position: relative;
+    }
+    .about-navy-card h3 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .about-navy-card p {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .stat-badge-pill {
+      background: var(--orange);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    /* ================================================================
+       5. SERVICES / EQUIPMENT CATEGORIES
+       ================================================================ */
+    .services-section {
+      padding: 70px 0;
+      background: var(--bg-white);
+    }
+    .cards-3-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .service-card {
+      background: var(--bg-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--orange);
+      background: #ffffff;
+    }
+    .service-card-img {
+      height: 200px;
+      position: relative;
+    }
+    .service-icon-badge {
+      position: absolute;
+      bottom: -20px;
+      left: 20px;
+      width: 42px;
+      height: 42px;
+      background: var(--navy-dark);
+      color: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .service-card-body {
+      padding: 32px 20px 20px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card-body h4 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 8px;
+    }
+    .service-card-body p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .service-card-body ul {
+      list-style: none;
+      font-size: 0.82rem;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+    }
+    .service-card-body li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .service-card-body li i {
+      color: var(--orange);
+      font-size: 0.7rem;
+    }
+    .read-more-link {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ================================================================
+       6. HOW WE GET IT DONE
+       ================================================================ */
+    .steps-section {
+      padding: 70px 0;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .step-box {
+      background: var(--bg-white);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      border: 1px solid var(--border-light);
+      position: relative;
+    }
+    .step-num {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .step-box h4 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 8px;
+    }
+    .step-box p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* ================================================================
+       7. FEATURED PROJECTS
+       ================================================================ */
+    .projects-section {
+      padding: 70px 0;
+      background: var(--navy-dark);
+      color: #ffffff;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .project-card {
+      background: var(--navy-card);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      border: 1px solid var(--border-dark);
+    }
+    .project-card h4 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    .project-card p {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      margin-bottom: 14px;
+    }
+    .project-card ul {
+      list-style: none;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+    .project-card li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .project-card li i {
+      color: var(--orange);
+    }
+
+    /* ================================================================
+       8. BUILDING TRUST / VALUE PILLARS
+       ================================================================ */
+    .trust-section {
+      padding: 70px 0;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .trust-img-box {
+      height: 380px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .trust-pillars-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .pillar-card {
+      background: var(--navy-dark);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .pillar-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(255, 112, 0, 0.15);
+      border: 1px solid rgba(255, 112, 0, 0.4);
+      color: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .pillar-info h5 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+    .pillar-info p {
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
+
+    /* ================================================================
+       9. REQUISITION FORM SECTION
+       ================================================================ */
+    .form-section {
+      padding: 70px 0;
+      background: var(--bg-white);
+    }
+    .form-box-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+    .form-card-light {
+      background: var(--bg-light);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      border: 1px solid var(--border-light);
+    }
+    .form-group-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-field {
+      margin-bottom: 16px;
+    }
+    .form-field label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+      color: var(--navy-dark);
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      transition: var(--transition);
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(255, 112, 0, 0.12);
+    }
+
+    .form-info-navy {
+      background: var(--navy-dark);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .info-item {
+      margin-bottom: 20px;
+    }
+    .info-item label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--orange);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .info-item p, .info-item a {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    /* ================================================================
+       10. BRANDS SECTION
+       ================================================================ */
+    .brands-section {
+      padding: 50px 0;
+    }
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
+    .brand-box {
+      background: var(--bg-white);
+      border-radius: var(--radius-md);
+      padding: 20px 12px;
+      text-align: center;
+      border: 1px solid var(--border-light);
+      transition: var(--transition);
+    }
+    .brand-box:hover {
+      border-color: var(--orange);
+      transform: translateY(-3px);
+    }
+    .brand-title {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--navy-dark);
+    }
+
+    /* ================================================================
+       11. FAQ ACCORDION SECTION
+       ================================================================ */
+    .faq-section {
+      padding: 70px 0;
+      background: var(--bg-white);
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+    }
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .accordion-item {
+      background: var(--bg-light);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+    }
+    .accordion-header {
+      padding: 16px 20px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .accordion-body {
+      padding: 0 20px 16px 20px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: none;
+    }
+    .accordion-item.active .accordion-body {
+      display: block;
+    }
+    .accordion-item.active .accordion-header i {
+      transform: rotate(180deg);
+      color: var(--orange);
+    }
+
+    .faq-callout-card {
+      background: var(--navy-dark);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ================================================================
+       12. FOOTER & FLOATING CTA
+       ================================================================ */
+    footer {
+      background: var(--navy-deep);
+      color: #94a3b8;
+      padding: 50px 0 24px 0;
+      font-size: 0.85rem;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 24px;
+    }
+    .footer-col h5 {
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+    .footer-col a {
+      color: #94a3b8;
+      transition: var(--transition);
+    }
+    .footer-col a:hover {
+      color: var(--orange);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      background: #25d366;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      transition: var(--transition);
+    }
+    .whatsapp-float:hover {
+      transform: translateY(-2px) scale(1.03);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--navy-dark);
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+      transition: var(--transition);
+      opacity: 0;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      position: fixed;
+      top: 0; right: -100%;
+      width: 80%; max-width: 320px;
+      height: 100vh;
+      background: var(--navy-dark);
+      color: #ffffff;
+      z-index: 999;
+      padding: 32px 24px;
+      transition: var(--transition);
+    }
+    .mobile-drawer.active { right: 0; }
+    .drawer-close {
+      background: none; border: none; color: #ffffff; font-size: 1.5rem; float: right; cursor: pointer;
+    }
+    .drawer-links {
+      list-style: none; margin-top: 48px; display: flex; flex-direction: column; gap: 20px;
+    }
+    .drawer-links a { color: #ffffff; font-size: 1.1rem; font-weight: 700; }
+
+    /* ================================================================
+       CRITICAL MOBILE FIXES (PREVENT OVERFLOW & SQUISH)
+       ================================================================ */
+    @media (max-width: 1024px) {
+      .hero-grid, .about-grid, .projects-grid, .trust-grid, .form-box-grid, .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .cards-3-grid, .steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .brands-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-title {
+        font-size: 2.3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .mobile-btn { display: block; }
+      .topbar-left {
+        gap: 10px;
+        font-size: 0.75rem;
+      }
+      .hero-section {
+        padding: 32px 0;
+      }
+      .hero-title {
+        font-size: 1.85rem;
+        line-height: 1.2;
+      }
+      .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+      }
+      .hero-split-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .hero-img-card {
+        height: 180px;
+      }
+      .hero-orange-stat-card {
+        padding: 16px;
+      }
+      .hero-orange-stat-card h3 {
+        font-size: 1.8rem;
+      }
+      .section-title {
+        font-size: 1.7rem;
+      }
+      .about-img-box, .trust-img-box {
+        height: 240px;
+      }
+      .about-navy-card, .project-card, .form-card-light, .form-info-navy, .faq-callout-card {
+        padding: 20px 16px;
+      }
+      .form-group-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .btn {
+        padding: 10px 18px;
+        font-size: 0.82rem;
+        width: 100%;
+      }
+      .pillar-card {
+        flex-direction: row;
+        padding: 14px 16px;
+      }
+      .whatsapp-float span {
+        display: none;
+      }
+      .whatsapp-float {
+        padding: 12px;
+        border-radius: 50%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-img {
+        height: 32px;
+      }
+      .hero-title {
+        font-size: 1.6rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================================================================
+       1. TOP BAR
+       ================================================================ -->
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div class="topbar-left">
+        <div class="topbar-item"><i class="fa-solid fa-phone"></i> <span>0414-8150009 / 0414-8100010</span></div>
+        <div class="topbar-item"><i class="fa-solid fa-envelope"></i> <span>chersiaca@gmail.com</span></div>
+        <div class="topbar-item"><i class="fa-solid fa-location-dot"></i> <span>Puerto La Cruz, Venezuela</span></div>
+      </div>
+      <div class="topbar-social">
+        <a href="https://wa.me/584148150009" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:chersiaca@gmail.com" aria-label="Correo"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       2. MAIN NAVBAR (ONLY: INICIO, NOSOTROS, CONTACTO)
+       ================================================================ -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <img src="img/logo.png" alt="CHERSIA, C.A." class="logo-img" />
+      </a>
+
+      <!-- Cleaned menu containing only: Inicio, Nosotros, Contacto -->
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="#contacto" class="btn btn-orange" style="width: auto;">
+          Solicitar Cotización <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        </a>
+        <button class="mobile-btn" onclick="toggleDrawer()"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer (Only: Inicio, Nosotros, Contacto) -->
+  <div class="mobile-drawer" id="drawer">
+    <button class="drawer-close" onclick="toggleDrawer()"><i class="fa-solid fa-xmark"></i></button>
+    <ul class="drawer-links">
+      <li><a href="#inicio" onclick="toggleDrawer()">Inicio</a></li>
+      <li><a href="#nosotros" onclick="toggleDrawer()">Nosotros</a></li>
+      <li><a href="#contacto" onclick="toggleDrawer()">Contacto</a></li>
+    </ul>
+    <div style="margin-top: 32px;">
+      <a href="#contacto" onclick="toggleDrawer()" class="btn btn-orange" style="width: 100%;">
+        Solicitar Cotización <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       3. HERO SECTION
+       ================================================================ -->
+  <section class="hero-section" id="inicio">
+    <div class="container">
+      
+      <div class="hero-grid">
+        
+        <div>
+          <span class="section-tag">ALIANZA PETROLERA E INDUSTRIAL</span>
+          <h1 class="hero-title">
+            Donde la Eficiencia impulsa la <span class="text-orange">Excelencia Operativa.</span>
+          </h1>
+          <p class="hero-subtitle">
+            El aliado integral de la industria petrolera y mecánica. Soluciones confiables y herramientas duraderas bajo presión con 55+ años de trayectoria.
+          </p>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="#contacto" class="btn btn-orange">
+              Inicie su Requisición <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+            <a href="#equipamiento" class="btn btn-outline">
+              Ver Catálogo <div class="btn-arrow" style="background: rgba(0,0,0,0.1);"><i class="fa-solid fa-arrow-down"></i></div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-split-cards">
+            <div class="hero-img-card">
+              <img src="img/hero-tools.png" alt="Herramientas industriales de precisión" />
+            </div>
+
+            <div class="hero-orange-stat-card">
+              <h3>55+</h3>
+              <p>Años en el Mercado Petrolero</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       4. ABOUT SECTION
+       ================================================================ -->
+  <section class="about-section" id="nosotros">
+    <div class="container">
+      
+      <div class="about-grid">
+        
+        <div class="about-img-box">
+          <img src="img/engineers.png" alt="Ingenieros y técnicos en sitio industrial" />
+        </div>
+
+        <div class="about-navy-card">
+          <span class="stat-badge-pill">Trayectoria Comprobada</span>
+          <h3>Solidez y Gestión Integral de Proyectos</h3>
+          <p>
+            Entendemos las exigencias de los entornos de trabajo más duros. En Chersia C.A. entregamos soluciones confiables respaldadas por atención personalizada y herramientas que cumplen con los más rigurosos estándares internacionales.
+          </p>
+          <a href="#contacto" class="btn btn-orange">
+            Solicitar Asesoría Técnica <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       5. SERVICES / EQUIPMENT CATEGORIES (STAYS ON WEB BODY)
+       ================================================================ -->
+  <section class="services-section" id="equipamiento">
+    <div class="container">
+      
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span class="section-tag">NUESTRO CATÁLOGO</span>
+        <h2 class="section-title">Equipamiento para la <span class="text-orange">Industria Petrolera</span></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Soluciones categorizadas para intervenciones de montaje, mantenimiento y seguridad crítica.</p>
+      </div>
+
+      <div class="cards-3-grid">
+        
+        <!-- Card 1: Antichispas -->
+        <div class="service-card" id="antichispa">
+          <div class="service-card-img">
+            <img src="img/antichispa.png" alt="Herramientas Antichispas" />
+            <div class="service-icon-badge"><i class="fa-solid fa-shield-virus"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h4>Herramientas Antichispas</h4>
+            <p>Foco Crítico de Seguridad para refinerías, plataformas y atmósferas volátiles.</p>
+            <ul>
+              <li><i class="fa-solid fa-circle"></i> Cobre-Berilio & Aluminio-Bronce</li>
+              <li><i class="fa-solid fa-circle"></i> Certificación de Seguridad Internacional</li>
+              <li><i class="fa-solid fa-circle"></i> Cero Chispas en Gas Inflamable</li>
+            </ul>
+            <a href="#contacto" onclick="selectCategory('Herramientas Antichispas')" class="read-more-link">
+              Cotizar Antichispa <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Potencia Eléctrica -->
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="img/worker.png" alt="Potencia Eléctrica" />
+            <div class="service-icon-badge"><i class="fa-solid fa-bolt"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h4>Potencia & Rendimiento</h4>
+            <p>Grado Industrial para jornadas continuas en talleres y obras de montaje.</p>
+            <ul>
+              <li><i class="fa-solid fa-circle"></i> Máquinas Roscadoras & Esmeriles</li>
+              <li><i class="fa-solid fa-circle"></i> Taladros & Sierras Caladoras</li>
+              <li><i class="fa-solid fa-circle"></i> Tronzadoras, Lijadoras & Pulidoras</li>
+            </ul>
+            <a href="#contacto" onclick="selectCategory('Potencia Eléctrica')" class="read-more-link">
+              Cotizar Eléctricos <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Intervención Manual -->
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="img/warehouse.png" alt="Intervención Manual y Consumibles" />
+            <div class="service-icon-badge"><i class="fa-solid fa-wrench"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h4>Manual, Neumática & Consumibles</h4>
+            <p>Alto torque, instrumentos de medición calibrados y consumibles de desgaste.</p>
+            <ul>
+              <li><i class="fa-solid fa-circle"></i> Llaves de Golpe, Combinadas, Doblatubos</li>
+              <li><i class="fa-solid fa-circle"></i> Prensas Hidráulicas & Graseras</li>
+              <li><i class="fa-solid fa-circle"></i> Mechas, Discos de Corte & Rectificadores</li>
+            </ul>
+            <a href="#contacto" onclick="selectCategory('Intervención Manual')" class="read-more-link">
+              Cotizar Manuales <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       6. HOW WE GET IT DONE
+       ================================================================ -->
+  <section class="steps-section">
+    <div class="container">
+      
+      <div style="margin-bottom: 32px;">
+        <span class="section-tag">PROCESO OPERATIVO</span>
+        <h2 class="section-title">Cómo Garantizamos la <span class="text-orange">Eficiencia</span></h2>
+      </div>
+
+      <div class="steps-grid">
+        
+        <div class="step-box">
+          <span class="step-num">01. ASESORÍA TÉCNICA</span>
+          <h4>Análisis de Requerimientos</h4>
+          <p>Evaluación directa de especificaciones de campo y niveles de riesgo para recomendar la herramienta adecuada.</p>
+        </div>
+
+        <div class="step-box">
+          <span class="step-num">02. SELECCIÓN DE MARCAS</span>
+          <h4>Marcas Globales Líderes</h4>
+          <p>Distribución de fabricantes certificados (RIDGID, PROTO, Snap-on, DEWALT, BOSCH, STANLEY).</p>
+        </div>
+
+        <div class="step-box">
+          <span class="step-num">03. DESPACHO & GARANTÍA</span>
+          <h4>Control & Despacho Rápido</h4>
+          <p>Verificación de calidad e inspección pre-entrega con despacho directo en Zona Industrial y refinerías.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       7. FEATURED PROJECTS / PRESENCE
+       ================================================================ -->
+  <section class="projects-section">
+    <div class="container">
+      
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span class="section-tag">TRAYECTORIA</span>
+        <h2 class="section-title light">Nuestra Presencia en <span class="text-orange">Proyectos Críticos</span></h2>
+        <p class="section-subtitle light" style="margin: 0 auto;">Abastecimiento continuo a plantas de procesamiento, refinerías y talleres mecánicos de alta exigencia.</p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <h4>Sector Refinación & Petroquímica</h4>
+          <p>Suministro prioritario de herramientas antichispas no magnéticas y equipos de roscado pesado.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Refinería Puerto La Cruz</li>
+            <li><i class="fa-solid fa-check"></i> Complejo Petroquímico Jose</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <h4>Campos de Perforación & Montaje Mecánico</h4>
+          <p>Equipamiento eléctrico de alta potencia, llaves de golpe de gran calibre y prensas hidráulicas.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Operaciones en Faja Petrolífera del Orinoco</li>
+            <li><i class="fa-solid fa-check"></i> Talleres de Mantenimiento Pesado en Anzoátegui</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       8. BUILDING TRUST / VALUE PILLARS
+       ================================================================ -->
+  <section class="trust-section">
+    <div class="container">
+      
+      <div class="trust-grid">
+        
+        <div class="trust-img-box">
+          <img src="img/refinery.png" alt="Instalaciones de la industria petrolera" />
+        </div>
+
+        <div>
+          <span class="section-tag">NUESTRA PROMESA</span>
+          <h2 class="section-title">Construyendo <span class="text-orange">Confianza</span>, Entregando Excelencia</h2>
+
+          <div class="trust-pillars-stack">
+            
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="pillar-info">
+                <h5>Seguridad Antichispa Certificada</h5>
+                <p>Herramientas en aleaciones de Cobre-Berilio aprobadas para atmósferas de alto riesgo.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-certificate"></i></div>
+              <div class="pillar-info">
+                <h5>Estándares Internacionales</h5>
+                <p>Equipos avalados por certificaciones globales de calidad y torque de precisión.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-truck-fast"></i></div>
+              <div class="pillar-info">
+                <h5>Despacho Inmediato en Zona Industrial</h5>
+                <p>Atención urgente en Oriente y envíos a todo el territorio nacional.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       9. REQUISITION FORM SECTION
+       ================================================================ -->
+  <section class="form-section" id="contacto">
+    <div class="container">
+      
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span class="section-tag">REQUISICIONES</span>
+        <h2 class="section-title">¿Necesita Equipamiento? <span class="text-orange">Hablemos.</span></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Envíenos su lista de ítems o especificaciones técnicas y le enviaremos la cotización a la brevedad.</p>
+      </div>
+
+      <div class="form-box-grid">
+        
+        <!-- Form Light Box -->
+        <div class="form-card-light">
+          <form id="mainReqForm" onsubmit="handleFormSubmit(event)">
+            
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="fName">Nombre / Contacto *</label>
+                <input type="text" id="fName" class="form-control" placeholder="Ej. Ing. Carlos Mendoza" required />
+              </div>
+              <div class="form-field">
+                <label for="fCompany">Empresa / RIF</label>
+                <input type="text" id="fCompany" class="form-control" placeholder="Ej. Servicios Petroleros J-12345" />
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="fPhone">Teléfono / WhatsApp *</label>
+                <input type="tel" id="fPhone" class="form-control" placeholder="0414-1234567" required />
+              </div>
+              <div class="form-field">
+                <label for="fEmail">Correo Electrónico *</label>
+                <input type="email" id="fEmail" class="form-control" placeholder="compras@empresa.com" required />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="fDetails">Detalle de Requisición / Especificaciones *</label>
+              <textarea id="fDetails" class="form-control" rows="4" placeholder="Indique modelos, cantidades o características técnicas de las herramientas..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-orange" style="width: 100%;">
+              Enviar Requisición Directa por WhatsApp <div class="btn-arrow"><i class="fa-solid fa-paper-plane"></i></div>
+            </button>
+
+          </form>
+        </div>
+
+        <!-- Info Navy Box -->
+        <div class="form-info-navy">
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 24px; border-bottom: 1px solid var(--border-dark); padding-bottom: 12px;">
+              Coordenadas de Contacto
+            </h3>
+
+            <div class="info-item">
+              <label>Ubicación Física</label>
+              <p>Calle Mediania Nro 15. Sector Bella Vista, Puerto La Cruz, Venezuela.</p>
+            </div>
+
+            <div class="info-item">
+              <label>Teléfonos Directos</label>
+              <p><a href="tel:04148150009">0414-8150009</a> / <a href="tel:04148100010">0414-8100010</a></p>
+            </div>
+
+            <div class="info-item">
+              <label>Correo Oficial</label>
+              <p><a href="mailto:chersiaca@gmail.com">chersiaca@gmail.com</a></p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/584148150009?text=Hola%20Chersia%20C.A.,%20deseo%20solicitar%20información%20y%20cotización." target="_blank" class="btn btn-orange" style="background: #25d366; box-shadow: none; margin-top: 16px;">
+            <i class="fa-brands fa-whatsapp"></i> Chat de WhatsApp Directo
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       10. BRANDS SECTION (STAYS ON WEB BODY)
+       ================================================================ -->
+  <section class="brands-section" id="marcas">
+    <div class="container">
+      
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="section-tag">MARCAS HOMOLOGADAS</span>
+      </div>
+
+      <div class="brands-grid">
+        <div class="brand-box"><div class="brand-title">RIDGID</div></div>
+        <div class="brand-box"><div class="brand-title">PROTO</div></div>
+        <div class="brand-box"><div class="brand-title">Snap-on</div></div>
+        <div class="brand-box"><div class="brand-title">DEWALT</div></div>
+        <div class="brand-box"><div class="brand-title">BOSCH</div></div>
+        <div class="brand-box"><div class="brand-title">STANLEY</div></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       11. FAQ ACCORDION SECTION
+       ================================================================ -->
+  <section class="faq-section">
+    <div class="container">
+      
+      <div class="faq-grid">
+        
+        <div>
+          <span class="section-tag">PREGUNTAS FRECUENTES</span>
+          <h2 class="section-title">¿Dudas sobre <span class="text-orange">Suministros</span>?</h2>
+
+          <div class="accordion">
+            
+            <div class="accordion-item active">
+              <div class="accordion-header" onclick="toggleFaq(this)">
+                <span>¿Cuentan con inventario para entrega inmediata?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="accordion-body">
+                Sí. Contamos con stock disponible en Puerto La Cruz para despacho directo a zonas industriales y refinerías de la región oriental y nacional.
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleFaq(this)">
+                <span>¿Qué certificaciones tienen las herramientas antichispas?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="accordion-body">
+                Nuestra línea antichispa está fabricada en aleaciones especiales de Cobre-Berilio y Aluminio-Bronce certificadas para uso seguro en atmósferas volátiles y gases inflamables.
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleFaq(this)">
+                <span>¿Realizan envíos fuera del estado Anzoátegui?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="accordion-body">
+                Atendemos requerimientos a nivel nacional con despacho coordinado a talleres, campos petroleros y plantas mecánicas en todo el país.
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleFaq(this)">
+                <span>¿Cómo solicitamos una cotización formal corporativa?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="accordion-body">
+                Puede completar nuestro formulario en línea o contactarnos directamente vía WhatsApp / correo electrónico con los datos de RIF de su empresa.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="faq-callout-card">
+          <i class="fa-solid fa-headset" style="font-size: 2.5rem; color: var(--orange); margin-bottom: 16px;"></i>
+          <h4 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px;">¿Preguntas específicas?</h4>
+          <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 24px;">Llámenos directamente y un asesor técnico le orientará.</p>
+          <a href="tel:04148150009" class="btn btn-orange" style="width: auto;">
+            Llamar al 0414-8150009 <div class="btn-arrow"><i class="fa-solid fa-phone"></i></div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       12. FOOTER
+       ================================================================ -->
+  <footer>
+    <div class="container">
+      
+      <div class="footer-top">
+        
+        <div>
+          <div style="margin-bottom: 12px;">
+            <img src="img/logo.png" alt="CHERSIA, C.A." class="logo-img" style="filter: brightness(0) invert(1);" />
+          </div>
+          <p style="font-size: 0.85rem; color: #94a3b8; max-width: 280px;">
+            El aliado integral de la industria petrolera y mecánica en Venezuela con 55+ años de trayectoria inquebrantable.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Líneas de Producto</h5>
+          <ul>
+            <li><a href="#equipamiento">Herramientas Antichispas</a></li>
+            <li><a href="#equipamiento">Potencia & Eléctricos</a></li>
+            <li><a href="#equipamiento">Intervención Manual</a></li>
+            <li><a href="#equipamiento">Consumibles Industriales</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contacto Directo</h5>
+          <ul>
+            <li>0414-8150009</li>
+            <li>0414-8100010</li>
+            <li>chersiaca@gmail.com</li>
+            <li>Puerto La Cruz, Anzoátegui</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 CHERSIA, C.A. Todos los derechos reservados.</div>
+        <div style="color: var(--orange); font-weight: 700;">Excelencia en Suministro Petrolero</div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/584148150009?text=Hola%20Chersia%20C.A.,%20deseo%20solicitar%20una%20cotización." target="_blank" class="whatsapp-float">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Atención WhatsApp</span>
+  </a>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span id="toastMsg">¡Requisición lista!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleDrawer() {
+      document.getElementById('drawer').classList.toggle('active');
+    }
+
+    function toggleFaq(element) {
+      const item = element.parentElement;
+      item.classList.toggle('active');
+    }
+
+    function selectCategory(catName) {
+      const field = document.getElementById('fDetails');
+      if (field) {
+        field.value = `Interesado en cotizar la línea: ${catName}.\nPor favor indicar disponibilidad y presupuesto.`;
+      }
+      showToast(`Categoría "${catName}" seleccionada.`);
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toastMsg').textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('fName').value;
+      const phone = document.getElementById('fPhone').value;
+      const email = document.getElementById('fEmail').value;
+      const details = document.getElementById('fDetails').value;
+
+      const text = `*NUEVA REQUISICIÓN - CHERSIA C.A.*\n` +
+        `👤 *Cliente:* ${name}\n` +
+        `📞 *Teléfono:* ${phone}\n` +
+        `✉️ *Correo:* ${email}\n` +
+        `📋 *Detalles:* ${details}`;
+
+      window.open(`https://wa.me/584148150009?text=${encodeURIComponent(text)}`, '_blank');
+      showToast('¡Abriendo WhatsApp para enviar la requisición!');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
