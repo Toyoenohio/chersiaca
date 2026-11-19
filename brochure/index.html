@@ -148,6 +148,7 @@
     .grid{grid-template-columns:1fr}
     .qr img{width:112px;height:112px}
   }
+  @media (max-width:420px){.hide-sm{display:none}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -158,7 +159,7 @@
     <a class="brand" href="https://chersiaca.com/">
       <img src="/img/logo.png" alt="CHERSIA, C.A." />
     </a>
-    <a class="back" href="https://chersiaca.com/">← Volver al sitio</a>
+    <a class="back" href="https://chersiaca.com/">← Volver<span class="hide-sm"> al sitio</span></a>
   </div>
 </header>
 
